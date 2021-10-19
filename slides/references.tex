@@ -1,5 +1,7 @@
 % ! TeX root = ../document.tex
 \begin{frame}[allowframebreaks]
-  \frametitle{References}
-  \printbibliography
+  \defbibcheck{mine}{\iffieldequalstr{annotation}{mine}{}{\skipentry}}
+  \frametitle{Papers}
+  \nocite{*}
+  \printbibliography[check=mine]
 \end{frame}
